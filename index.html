@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New Tab Opener</title>
+        <style>
+            .button
+            {
+                display: block;
+                width: 115px;
+                height: 25px;
+                background: #24292e;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                line-height: 25px;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div>
+            <h1 style="position:fixed; left:70vh; top:8vh; font-size:5vh;">Click to Open New Tab ^_^</h1>
+            <a class="button" id="url_to_open" target="_blank" onclick="previous_page()" style="position:fixed; left:70vh; top:50vh;">Click</a>
+            <img src="./github.jpg" alt="Image Not Found" style="width:60vh; height:60vh; position:fixed; left:90vh; top:18vh;">
+        </div>
+
+        <form method="get">
+            <p type="text" id="url" name="url"></p>
+        </form>
+
+        <p style="font-size: 1.6vw; color: #24292e; position:fixed; bottom:0; left:165vh;"><b>Made By: </b><a href="https://github.com/namishkhanna"> Namish Khanna </a></p>
+
+        <script>
+            link_to_open = String(window.location.href).split("=")[1]
+            document.getElementById("url_to_open").setAttribute("href",link_to_open);
+        </script>
+
+        <script>
+            function previous_page()
+            {
+                window.history.back();
+            }
+        </script>
+    </body>
+</html>
